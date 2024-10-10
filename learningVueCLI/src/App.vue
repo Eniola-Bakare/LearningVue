@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png" />
-    <ninja></ninja>
+    <app-header></app-header>
+    <mainContent v-bind:ninjas="ninjas"></mainContent>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -12,16 +14,30 @@ export default {
     // ninja: Ninjas,
   },
   name: "App",
+  data() {
+    return {
+      ninjas: [
+        { name: "Ryu", speciality: "Vue Components", show: false },
+        { name: "Crystal", speciality: "HTML Wizardry", show: false },
+        { name: "Hitoshi", speciality: "Click Events", show: false },
+        { name: "Tango", speciality: "Conditionals", show: false },
+        { name: "Kami", speciality: "Webpack", show: false },
+        { name: "Yoshi", speciality: "Data Diggin", show: false },
+      ],
+    };
+  },
 };
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
+  font-family: "Nunito SemiBold";
+}
+img {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

@@ -4,8 +4,14 @@ import Vue from "vue";
 import App from "./App";
 import router from "./router";
 import Ninjas from "./components/FirstComponent.vue";
+import Header from "./components/composition/Header.vue";
+import Footer from "./components/composition/Footer.vue";
+import MainContent from "./components/composition/MainContent.vue";
 
 Vue.component("ninja", Ninjas);
+Vue.component("app-header", Header);
+Vue.component("app-footer", Footer);
+Vue.component("mainContent", MainContent);
 
 new Vue({
   el: "#app",
