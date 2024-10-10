@@ -1,20 +1,15 @@
 <template>
   <div>
-    <h1>
-      You did it, <span v-show="userShow">{{ user }}!</span>
-    </h1>
-    <button v-on:click="changeUser">Chnage username</button>
-    <ninja></ninja>
+    <li v-for="ninja in ninjas">{{ ninja }}</li>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Eniola",
+  name: "FirstComponent",
   data() {
     return {
-      user: "Eniola !",
-      userShow: false,
+      ninjas: ["Eniola", "Jane", "Stormmer !"],
     };
   },
   methods: {
