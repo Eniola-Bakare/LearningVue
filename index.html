@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Learning Vue</title>
+  </head>
+  <body>
+    <div id="vue-app">
+      <!-- Hello, {{name}} -->
+      <!-- 
+      <p>{{greet()}}</p>
+      <a v-bind:href="website">Hello World !</a>
+      <p v-html="websiteTag"></p>
+
+      <input type="text" v-bind:value="year" />
+      <input type="text" v-model="year" /> -->
+
+      <!-- <div class="">
+        <button
+          v-on:click="available = !available"
+          v-bind:class="{available: available}"
+          v-on:click.once="add"
+        >
+          Add
+        </button>
+        <p v-if="available">{{age}}</p>
+        <p v-else-if="name">{{name}}</p>
+
+        <p v-show="available">Shower</p>
+        <p v-show="!available">!Shower</p>
+        <button v-on:click="subtract">Subtract</button>
+      </div>
+      <div class="canvas" v-on:mousemove="updateXY">{{x}}, {{Y}}</div> -->
+      <!-- 
+      <div class="">
+        <p v-for="(character, index) in characters">
+          {{index+=1}}. {{character}}
+          <br />
+          <span v-for="(ninja, index) in ninjas"
+            >Name: {{ninja.name}} - Age: {{ninja.age}} <br
+          /></span>
+          <br />
+          <span v-for="(ninja, index) in ninjas"
+            ><span v-for="(val, key) in ninja"> {{key}} - {{val}} <br /></span>
+          </span>
+        </p>
+      </div> -->
+
+      <!-- <div id="bag" v-bind:class="{burst: ended}"></div>
+
+      <div id="bag-health">
+        <div v-bind:style="{width: health + '%' }"></div>
+      </div>
+
+      <div id="controls">
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restart">Restart</button>
+      </div> -->
+
+      <div id="app-one">
+        <h1>{{title}}</h1>
+        <greeting></greeting>
+        <!-- <p>{{text}}</p>
+        <button v-on:click="titleChange()">Change me !</button> -->
+      </div>
+
+      <div id="app-two">
+        <h1>{{title}}</h1>
+        <p>{{text}}</p>
+        <greeting></greeting>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
