@@ -59,11 +59,16 @@ var appOne = new Vue({
   data: {
     title: "App One",
     text: "Hollas ! from App One",
+    output: "mmmmmmmmmm",
   },
 
   methods: {
     titleChange: function () {
       appTwo.title = "From App One: Changed";
+    },
+    changeRef: function () {
+      console.log("one: ", this.$refs.entry.value);
+      this.output = this.$refs.entry.value;
     },
   },
   computed: {},
@@ -82,26 +87,24 @@ var appTwo = new Vue({
 });
 
 // appOne.text = 'Changed from outside !'
-var dat = { name: "Test" };
-Vue.component("greeting", {
-  template:
-    " <div><p> Hello, {{ name }} </p><button v-on:click='changeName'>Change my name</button><div/>",
-  //   data: function () {
-  //     return dat;
-  //   },
-  data: function () {
-    return {
-      name: "Yola",
-      age: 435,
-    };
-  },
-  methods: {
-    changeName: function () {
-      this.name = "Onaso";
-    },
-  },
-});
+// var dat = { name: "Test" };
+// Vue.component("greeting", {
+//   template:
+//     " <div><p> Hello, {{ name }} </p><button v-on:click='changeName'>Change my name</button></div>",
 
-new Vue({
-  el: "#vue-app",
-});
+//   data: function () {
+//     return {
+//       name: "Yola",
+//       age: 435,
+//     };
+//   },
+//   methods: {
+//     changeName: function () {
+//       this.name = "Onaso";
+//     },
+//   },
+// });
+
+// new Vue({
+//   el: "#vue-app",
+// });

@@ -62,7 +62,10 @@
 
       <div id="app-one">
         <h1>{{title}}</h1>
-        <greeting></greeting>
+        <!-- <greeting></greeting> -->
+        <input type="text" ref="entry" />
+        <p>{{output}}</p>
+        <button v-on:click="changeRef">Change me: Ref</button>
         <!-- <p>{{text}}</p>
         <button v-on:click="titleChange()">Change me !</button> -->
       </div>
@@ -70,8 +73,8 @@
       <div id="app-two">
         <h1>{{title}}</h1>
         <p>{{text}}</p>
-        <greeting></greeting>
       </div>
+      <!-- <greeting></greeting> -->
     </div>
 
     <script src="app.js"></script>
