@@ -1,6 +1,6 @@
 <template>
   <div>
-    <li v-for="ninja in ninjas">{{ ninja }}</li>
+    <li v-for="ninja in ninjas" v-bind:key="ninja">{{ ninja }}</li>
   </div>
 </template>
 
